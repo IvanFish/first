@@ -1,0 +1,43 @@
+{% extends "blog/base.html" %}
+
+{% block content %}
+
+
+<DOCTYPE html>
+
+
+
+<html>
+	<head>
+		<title> Регистрация </title>
+	</head>
+	
+	<body>
+		<h1> Регистрация </h1>
+		<i class="fa fa-registered fa-2x" aria-hidden="true"></i>
+		
+		{% if registered %}
+		<strong> Спасибо за регистрацию</strong>
+		
+		<strong> Теперь нажмите на замок и войдите, введя ваш логин и пароль.</strong>
+		
+		{% else %}
+	
+		
+		<form id ="user_form" method="post" action="/blog/register/"
+		           enctype ="multipart/form-data">
+			           
+			    {% csrf_token %}
+			    
+			     {{ user_form.as_p }}
+			     {{ profile_form.as_p }}
+			     
+			     <input type = "submit" name ="submit" value="Регистрация" />
+		</form>
+		{% endif %}
+	</body>
+</html>	
+{% endblock %}
+
+   
+			           

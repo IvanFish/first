@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <title>animation-duration</title>
+  <style>
+   .warn {
+    background: #fc0;
+    padding: 10px;
+   }
+   .fadeInLeft {
+    -webkit-animation-name: fadeInLeft;
+    -webkit-animation-duration: 1s;
+    animation-name: fadeInLeft;
+    animation-duration: 1s;
+   }
+   @-webkit-keyframes fadeInLeft {
+    from {
+     opacity: 0;
+     transform: translateX(-2000px);
+    }
+    to {
+     opacity: 1;
+     transform: none;
+    }
+   }
+   @keyframes fadeInLeft {
+    from {
+     opacity: 0;
+     transform: translateX(-2000px);
+    }
+    to {
+     opacity: 1;
+     transform: none;
+    }
+   }
+  </style>
+ </head>
+ <body>
+  <div class="warn fadeInLeft">Принимаются вопросы и предложения, на электронную почту tim0cat@yandex.ru</div>
+ </body>
+</html>

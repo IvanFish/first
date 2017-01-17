@@ -1,0 +1,32 @@
+{% extends "blog/base.html" %}
+
+{% block content %}
+
+<!DOCTYPE html>
+<html>
+    <head>
+        
+        <title>Вход</title>
+    </head>
+
+    <body>
+	    <i class="fa fa-cog fa-spin fa-3x fa-fw" aria-hidden="true"></i>
+        <span class="sr-only">Saving. Hang tight!</span>
+
+        <h1>Войти в блог</h1>
+
+        <form id="login_form" method="post" action="/blog/login/">
+            {% csrf_token %}
+            Логин: <input type="text" name="username" value="" size="50" />
+            <br />
+            Пароль: <input type="password" name="password" value="" size="50" />
+            <br />
+
+            <input type="submit" value="Войти" />
+        </form>
+        
+       
+
+    </body>
+</html>
+{% endblock %}
